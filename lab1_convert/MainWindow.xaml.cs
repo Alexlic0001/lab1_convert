@@ -88,6 +88,6 @@ namespace lab1_convert
         {
             return g * 5;
         }
-
+        //
     }
 }
