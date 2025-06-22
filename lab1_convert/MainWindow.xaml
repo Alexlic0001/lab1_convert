@@ -1,0 +1,36 @@
+﻿<Window x:Class="lab1_convert.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab1_convert"
+        mc:Ignorable="d"
+        Title="Конвертер единиц массы" Height="250" Width="400">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="0,0,0,10">
+            <Label Content="Выберите тип конвертации:" VerticalAlignment="Center"/>
+            <ComboBox x:Name="ConversionTypeComboBox" Width="200" Margin="10,0,0,0" SelectionChanged="ConversionTypeComboBox_SelectionChanged">
+                <ComboBoxItem Content="Килограммы в фунты"/>
+                <ComboBoxItem Content="Граммы в унции"/>
+                <ComboBoxItem Content="Тонны в килограммы"/>
+                <ComboBoxItem Content="Пуд в килограммы"/>
+                <ComboBoxItem Content="Граммы в карат"/>
+            </ComboBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,0,0,10">
+            <Label Content="Введите значение:" VerticalAlignment="Center"/>
+            <TextBox x:Name="InputTextBox" Width="150" Margin="70,0,0,0"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Margin="0,0,0,10">
+            <Label Content="Результат:" VerticalAlignment="Center"/>
+            <TextBox x:Name="ResultTextBox" Width="150" IsReadOnly="True" Margin="117,0,0,0"/>
+        </StackPanel>
+        <Button Content="Конвертировать" Grid.Row="3" Width="120" HorizontalAlignment="Left" Click="ConvertButton_Click"/>
+    </Grid>
+</Window>
